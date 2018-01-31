@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+
+        <!-- all css here -->
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('build/css/bootstrap.min.css') }}">
+            <link rel="stylesheet" href="{{ asset('build/css/animate.css') }}">
+            <link rel="stylesheet" href="{{ asset('build/css/owl.carousel.css') }}">
+            <link rel="stylesheet" href="{{ asset('build/css/animated-text.css') }}">
+            <link rel="stylesheet" href="{{ asset('build/css/material-design-iconic-font.min.css') }}">
+            <link rel="stylesheet" href="{{ asset('build/css/font-awesome.min.css') }}">
+            <link rel="stylesheet" href="{{ asset('build/css/magnific-popup.css') }}">
+            <link rel="stylesheet" href="{{ asset('build/style.css') }}">
+            <link rel="stylesheet" href="{{ asset('build/css/responsive.css') }}">
+
+            <script src="{{ asset('build/js/vendor/modernizr-2.8.3.min.js') }}"></script>
+
+        {% endblock %}
+    </head>
+    <body>
+        {% block body %}
+            <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+            <![endif]-->
+
+            {#<div id="preloader"></div>#}
+            <!-- header-start -->
+            <header>
+                {% block header %}
+                    <div class="header-area">
+                        <div id="main-menu" class="sticker">
+                            <div class="container-fluid">
+                                <!--second nav button -->
+                                <div id="menu_bars" class="right hidden-xs">
+                                    <span class="t1"></span>
+                                    <span class="t2"></span>
+                                    <span class="t3"></span>
+                                </div>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-12 col-xs-12">
+                                            <div class="logo floatleft navbar-header">
+                                                <a class="navbar-brand" href="{{ path('homepage') }}"><h3>Maroon</h3></a>
+                                                <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu-2">
+                                                    <i class="fa fa-bars menu-open"></i>
+                                                    <i class="fa fa-times menu-close"></i>
+                                                </button>
+                                            </div>
+
+                                            <div class="main-menu floatright collapse navbar-collapse" id="main-menu-2">
+
+                                                <nav>
+                                                    {{ knp_menu_render('main') }}
+                                                </nav>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endblock %}
+            </header>
+            <!-- header-end -->
+
+            <div>
+                {% block breadcrum %}{% endblock %}
+                {% block content %}{% endblock %}
+            </div>
+
+                <!-- footer-start -->
+            <footer>
+                {% block footer %}
+                    <div class="footer-area black-bg ptb-100">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-12 text-center col-md-12 col-sm-12 col-xs-12">
+                                        <h2 class="footer-title">Maroon</h2>
+                                        <div class="contact-sochil-icon copyright-icon">
+                                            <a href="#"><i class="zmdi zmdi-google"></i></a>
+                                            <a href="#"><i class="zmdi zmdi-facebook"></i></a>
+                                            <a href="#"><i class="zmdi zmdi-twitter"></i></a>
+                                            <a href="#"><i class="zmdi zmdi-linkedin"></i></a>
+                                            <a href="#"><i class="zmdi zmdi-instagram"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <div class="copyright-left text-center">
+                                            <span>Copyright © 2017 Slashtheme All rights reserved.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                {% endblock %}
+            </footer>
+                <!-- footer-end -->
+
+            {% block javascripts %}
+                <script src="{{ asset('build/js/vendor/jquery-1.12.0.min.js') }}"></script>
+                <script src="{{ asset('build/js/bootstrap.min.js') }}"></script>
+                <script src="{{ asset('build/js/app.js') }}"></script>
+                <script src="{{ asset('build/js/owl.carousel.min.js') }}"></script>
+                <script src="{{ asset('build/js/wow.min.js') }}"></script>
+                <script src="{{ asset('build/js/jquery.stellar.min.js') }}"></script>
+                <script src="{{ asset('build/js/isotope.pkgd.min.js') }}"></script>
+                <script src="{{ asset('build/js/imagesloaded.pkgd.min.js') }}"></script>
+                <script src="{{ asset('build/js/jquery.counterup.min.js') }}"></script>
+                <script src="{{ asset('build/js/animated-text.js') }}"></script>
+                <script src="{{ asset('build/js/particles.min.js') }}"></script>
+                <script src="{{ asset('build/js/app.js') }}"></script>
+                <script src="{{ asset('build/js/jquery.scrollUp.js') }}"></script>
+                <script src="{{ asset('build/js/waypoints.min.js') }}"></script>
+                <script src="{{ asset('build/js/jquery.magnific-popup.min.js') }}"></script>
+                <script src="{{ asset('build/js/plugins.js') }}"></script>
+                <script src="{{ asset('build/js/main.js') }}"></script>
+
+            {% endblock %}
+        {% endblock %}
+
+    </body>
+</html>

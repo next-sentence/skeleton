@@ -1,0 +1,32 @@
+{% extends 'SonataAdminBundle::standard_layout.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+
+    {#{% stylesheets filter='cssrewrite' output='css/compiled/main.css'#}
+        {#'css/main.css'#}
+    {#%}#}
+    {#<link rel="stylesheet" type="text/css" href="{{ asset_url }}" media="screen,project" />#}
+    {#{% endstylesheets %}#}
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+    {#{% javascripts output='js/compiled/admin.js'#}
+        {#'js/admin.js'#}
+    {#%}#}
+    {#<script src="{{ asset_url }}"></script>#}
+    {#{% endjavascripts %}#}
+{% endblock %}
+
+{% block body_attributes -%}
+    class="sonata-bc skin-black-light layout-boxed
+    {% if app.request.cookies.get('sonata_sidebar_hide') -%}
+        sidebar-collapse
+    {%- endif -%}"
+{%- endblock -%}
+
+{% block side_bar_after_nav %}
+    {# removes "sonata project" link #}
+{% endblock %}

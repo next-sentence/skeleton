@@ -1,0 +1,13 @@
+sonata_admin:
+    title: 'Admin'
+    templates:
+        layout:  "admin_layout.html.twig"
+    dashboard:
+        blocks:
+            - { type: sonata.admin.block.admin_list, position: left }
+
+sonata_block:
+    default_contexts: [cms]
+    blocks:
+        sonata.admin.block.admin_list:
+            contexts: [admin]
