@@ -12,7 +12,7 @@
         "sonata-project/doctrine-orm-admin-bundle": "3.x@dev",
         "sonata-project/google-authenticator": "2.x@dev",
         "sonata-project/user-bundle": "4.x@dev",
-        "symfony/acl-bundle": "^1.0",
+
         "symfony/asset": "^4.0",
         "symfony/console": "^4.0",
         "symfony/debug-pack": "*",
